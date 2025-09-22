@@ -1,0 +1,255 @@
+<html><head><base href="." />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz animes</title>
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="shortcut icon" href="Img/dbz.jpg" type="image/x-icon">
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h1>Qual personagem de anime você seria?    🤔😆</h1>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <div id="quiz">
+            
+
+        </div>
+        <div class="result" id="result">
+            <h2>No final das contas, pelos pontos adquiridos identificamos você com...</h2>
+            <img id="character-img" alt="" width="650" height="400">
+            <h3 id="character-name"></h3>
+            <p id="character-description"></p>
+        </div>
+    </div>
+    
+    <script>
+        const questions = [
+            {
+                question: "Como você normalmente lida com conflitos?",
+                options: [
+                    "Enfrento isso de frente com determinação",
+                    "Tento encontrar uma solução pacífica",
+                    "Analiso a situação com cuidado",
+                    "Uso o humor para acalmar a situação"
+                ]
+            },
+            {
+                question: "Qual é a sua atividade ideal para o fim de semana?",
+                options: [
+                    "Treinamento e autoaperfeiçoamento",
+                    "Sair com amigos",
+                    "Ler e estudar/fazer lição",
+                    "Se trancar no quarto o final de semana todo"
+                ]
+            },
+            {
+                question: "Qual a sua maior qualidade?",
+                options: [
+                    "Determinação",
+                    "Empatia",
+                    "Inteligencia",
+                    "Persistência"
+                ]
+            },
+            {
+                question: "Como as outras pessoas provavelmente pensam de você?",
+                options: [
+                    "Ele(a) é muito Energético e agitado",
+                    "Ele(a) é engraçado e bem humorado",
+                    "Ele(a) é inteligente",
+                    "Ele(a) é imprevisível"
+                ]
+            },
+            {
+                question: "Qual o seu maior sonho??",
+                options: [
+                    "Participar de um programa de TV",
+                    "Ser muito inteligente",
+                    "Ser o mais rico de todos",
+                    "Se divertir e aproveitar a vida"
+                ]
+            },
+            {
+                question: "Qual estilo de luta você prefere?",
+                options: [
+                    "Karate",
+                    "Taekwondo",
+                    "Boxing",
+                    "Capoeira"
+                ]
+            },
+            {
+                question: "Como você toma decisões?",
+                options: [
+                    "Vou só no meu instinto",
+                    "Considero os sentimentos dos outros",
+                    "Analiso todas as possibilidades",
+                    "O Que parecer mais interessantes"
+                ]
+            },
+            {
+                question: "Qual o seu maior medo?",
+                options: [
+                    "Não conseguir alcançar meus objetivos",
+                    "Perder entes queridos",
+                    "Insetos",
+                    "Escuro"
+                ]
+            },
+            {
+                question: "Qual sua matéria favorita da escola?",
+                options: [
+                    "Educação fisica",
+                    "Artes",
+                    "Ciencias",
+                    "Aula pratica sobre coisas"
+                ]
+            },
+            {
+                question: "O que Você faz quando está  estressado?",
+                options: [
+                    "Treina pra ficar bombado",
+                    "Fala com os Amigos",
+                    "Pensa sobre",
+                    "Procura algo divertido para fazer"
+                ]
+            },
+            {
+                question: "Qual o seu papel em um trabalho em equipe ??",
+                options: [
+                    "Ser o lider que quer mandar em todos ",
+                    "O cara que ajuda com tudo",
+                    "O cara que pensa em tudo",
+                    "Você faz o trabalho todo sem ajuda"
+                ]
+            },
+            {
+                question: "qual poder você escolheria ?",
+                options: [
+                    "Parar o tempo 🤨",
+                    "Cura absurda",
+                    "Ler pensamentos ",
+                    "Super força"
+                ]
+            },
+            {
+                question: "Qual sua cor favorita?",
+                options: [
+                    "Vermelho",
+                    "Azul",
+                    "Roxo",
+                    "Outra ou Rosa pink"
+                ]
+            },
+            {
+                question: "Como você vê as leis?",
+                options: [
+                    "seguir as diretrizes",
+                    "Importante para a harmonia",
+                    "Logica necessária",
+                    "Feitas para serem quebradas"
+                ]
+            },
+            {
+                question: "Qual seu clima favorito?",
+                options: [
+                    "Ensolarado",
+                    "Nublado",
+                    "Chuvoso",
+                    "Tempestuoso"
+                ]
+            }
+        ];
+    
+        const characters = {
+            A: {
+                name: "Naruto Uzumaki",
+                image: "Img/naruto.jpg",
+                description: "Você é enérgico, determinado e nunca desiste! Assim como Naruto, você tem um forte senso de justiça e fará de tudo para proteger seus amigos. Sua determinação e atitude positiva inspiram outras pessoas ao seu redor."
+            },
+            B: {
+                name: "Mikasa Ackerman",
+                image: "Img/Mikasa.jpg",
+                description: "Legal, controlado e ferozmente leal. Como Mikasa, você protege aqueles de quem gosta e tem uma força de vontade incrível. Você é confiável e sempre coloca os outros antes de você."
+            },
+            C: {
+                name: "L Lawliet",
+                image: "Img/L.jpg",
+                description: "Altamente analítico e inteligente, você aborda os problemas com lógica e consideração cuidadosa. Assim como L, você tem uma maneira única de pensar e não tem medo de se destacar na multidão."
+            },
+            D: {
+                name: "Gojo Satoru",
+                image: "Img/Gojo.webp",
+                description: "Carismático e poderoso, você enfrenta a vida com confiança e estilo. Assim como Gojo, você tem uma personalidade divertida, mas sabe quando falar sério. Você é naturalmente talentoso e adora se divertir enquanto é incrível!"
+            }
+        };
+    
+        let currentQuestion = 0;
+        let answers = {A: 0, B: 0, C: 0, D: 0};
+    
+        function displayQuestion() {
+            const quizDiv = document.getElementById('quiz');
+            const question = questions[currentQuestion];
+            
+            const questionHTML = `
+                <div class="question active">
+                    <h3>Question ${currentQuestion + 1}</h3>
+                    <p>${question.question}</p>
+                    <div class="options">
+                        ${question.options.map((option, index) => `
+                            <button onclick="answerQuestion(${index})">${option}</button>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            
+            quizDiv.innerHTML = questionHTML;
+            updateProgressBar();
+        }
+    
+        function answerQuestion(optionIndex) {
+            const letters = ['A', 'B', 'C', 'D'];
+            answers[letters[optionIndex]]++;
+            
+            currentQuestion++;
+            
+            if (currentQuestion < questions.length) {
+                displayQuestion();
+            } else {
+                showResult();
+            }
+        }
+    
+        function updateProgressBar() {
+            const progress = document.querySelector('.progress');
+            const percentage = (currentQuestion / questions.length) * 100;
+            progress.style.width = `${percentage}%`;
+        }
+    
+        function showResult() {
+            const result = Object.entries(answers).reduce((a, b) => a[1] > b[1] ? a : b)[0];
+            const character = characters[result];
+            
+            document.getElementById('quiz').style.display = 'none';
+            document.getElementById('result').style.display = 'block';
+            document.getElementById('character-img').src = character.image;
+            document.getElementById('character-img').alt = `${character.name} - anime character portrait`;
+            document.getElementById('character-name').textContent = character.name;
+            document.getElementById('character-description').textContent = character.description;
+        }
+    
+      
+    
+        // Start the quiz
+        displayQuestion();
+    </script>
+
+<br>
+<br>
+
+    <footer>Esse quiz foi desenvolvido por: Arthur, Daniel, Gustavo Rodrigues, Gustavo e Igor</footer>
+
+
+</body></html>

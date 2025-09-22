@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de 3 Segundos</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            font-size: 48px; /* Tamanho da fonte */
+            color: #333; /* Cor do texto */
+            transition: opacity 1.5s ease; /* Transição suave */
+            opacity: 1; /* Opacidade inicial */
+            background: linear-gradient(135deg, #07000e, #071835, #0f011f);
+        }
+        .contador {
+            font-size: 250px; /* Tamanho do contador */
+            font-weight: bold;
+            color: #ffffff; /* Cor do contador */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #prepare-se{
+            font-size: 50px;
+            color: whitesmoke;
+            text-align: center;
+            padding-top: 30px;
+            
+        }
+
+        #quiz{
+            font-size: 125px;
+            color: wheat;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            text-decoration: underline;
+            padding-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="contador">3</div> <br>
+    
+
+    <script>
+        let contador = 3; // Inicializa o contador
+
+        const updateCounter = () => {
+            const contadorElement = document.querySelector('.contador');
+            contadorElement.textContent = contador; // Atualiza o texto do contador
+
+            if (contador > 0) {
+                contador--; // Decrementa o contador
+            } else {
+                // Inicia a transição
+                document.body.style.opacity = '0'; // Define a opacidade para 0
+                setTimeout(() => {
+                    // Redireciona para outra página após a transição
+                    window.location.href = "Inicio.html"; // Substitua pelo URL da sua página
+                }, 500); // Tempo igual à duração da transição
+            }
+        };
+
+        // Atualiza o contador a cada segundo
+        setInterval(updateCounter, 1000);
+    </script>
+
+</body>
+</html>

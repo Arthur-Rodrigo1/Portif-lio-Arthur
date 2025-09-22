@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(Img/Design\ sem\ nome.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Altura mínima da tela */
+    background-position: center;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quiz-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Cor da caixa do quiz com um pouco de transparência */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 800px; /* Largura da caixa do quiz */
+    transition: transform 1.2s; /* Efeito de transição */
+}
+
+.quiz-box:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+.anime-image {
+    margin-bottom: 20px;
+}
+
+.anime-image img {
+    max-width: 100%; /* Imagem responsiva */
+    height: auto;
+    border-radius: 15px; /* Bordas arredondadas para a imagem */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra na imagem */
+}
+
+button {
+    background-color: #003366; /* Cor do botão */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 15px 0;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s; /* Efeito de transição na cor do botão */
+}
+
+button:hover {
+    background-color: #a47dff; /* Cor do botão ao passar o mouse */
+}
+
+.vale-lembra {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #003366;
+}
+
+#anime {
+    color: #09345f;
+    font-size: 60px; /* Ajuste do tamanho da fonte */
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 5px;
+    
+}
+
+#valelembrar {
+    font-size: 28px; /* Ajuste do tamanho da fonte */
+    color: #031e38;
+    font-weight: bold;
+}
